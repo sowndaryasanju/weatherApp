@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Weather app</title>
+   <link rel="stylesheet type="text/CSS" href="myStyle.css">
+   <script src="myScript.js"></script>
+</head>
+<body>
+<img src="images/log.webp" width="175px">
+<h1 class="title" style="position: absolute;left:600px;top: 5px;">Welcome</h1>
+<div><h1 class="title" style="position: absolute;left:500px;top: 35px;">To weather app</h1></div>
+<div id="selLoc">
+<button id="curr" onclick="Current()">Click here to use current location</button>
+
+<select name="places" class="places" id="places">
+    <option value="mumbai">mumbai</option>
+    <option value="london">london</option>
+    <option value="dubai">dubai</option>
+    <option value="tokyo">tokyo</option>
+    <option value="paris">paris</option>
+    <option value="new york">new york</option>
+</select>
+<button onclick="submit()" class="places">Submit</button>
+<p style="position: absolute; top: 250px; left:570px;">Search by latitude</p>
+<input type="number" placeholder="latitude" id="latitude">
+<input type="number" placeholder="longitude" id="longitude" >
+<button id="SearchBYLat" onclick="latSearch()" style="position: absolute; top: 310px; left:550px; background-color: darkgreen;">Search</button>
+</div>
+<div id="locationinfo">
+<h3 id="ti">Weather of the selected location</h3>
+<table id="winfo">
+    <tr>
+        <th>Attribute name</th>
+        <th>Attribute value</th>
+    </tr>
+    <tr>
+        <td>Condition</td>
+        <td id="1">-</td>
+    </tr>
+    <tr>
+        <td>temperature</td>
+        <td id="2">-</td>
+    </tr>
+    <tr>
+        <td>Feels like</td>
+        <td id="3">-</td>
+    </tr>
+    <tr>
+        <td>Temperature minimum value</td>
+        <td id="4">-</td>
+    </tr>
+    <tr>
+        <td>Temperature maximum value</td>
+        <td id="5">-</td>
+    </tr>
+    <tr>
+        <td>wind speed</td>
+        <td id="6">-</td>
+    </tr>
+    <tr>
+        <td>wind degree</td>
+        <td id="7">-</td>
+    </tr>
+</table>
+<h4 id='currInfo' style="position:absolut;left:10px;top:170px"></h4>
+</div>
+<button  id="clear" onclick="clear()" style="position:absolute;left:10px;top:500px"><img src="images/reset.jpg" width="150px"></button>
+</body>
